@@ -1,0 +1,9 @@
+.style-ref__active {
+    text-decoration: none;
+    color: red;
+}
+
+.image {
+  width: 100px;
+  height: 300px;
+}

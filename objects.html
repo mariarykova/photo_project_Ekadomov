@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./objects.css">
+    <title>Objects</title>
+
+</head>
+<body>
+    <div>
+        <div class="main-page">
+            <div class="menu-left">
+                <div class="menu">
+                    <div class="name"><a class="style-ref" href="index.html">Mikhail Ekadomov</a></div>
+                    <div class="collection"> <a class="style-ref" href="weddingday.html">Wedding day</a></div>
+                    <div class="collection"> <a class="style-ref" href="unsorted.html">Unsorted</a></div>
+                    <div class="collection"><a class="style-ref" href="apsny.html">Apsny</a></div>
+                    <div class="collection"><a class="style-ref" href="portrait.html">Portraits of Employees</span></a></div>
+                    <div class="collection"><a class="style-ref__active" href="Objects.html">Objects</span></a></div>
+                    <div class="collection"><a class="style-ref" href="#">Still <span style="font-style:italic;"> (work in progress)</span></a></div>
+                    <div class="blog"><a class="style-ref" href="">blog</a></div>
+                    <div class="CV"><a class="style-ref" href="cv.html">CV</a></div>
+                    <div class="contacts"><a class="style-ref" href="contact.html">contacts</a></div>
+                </div>
+                <div class="navmenu">
+                    <div class="name">
+                        <a class="style-ref" href="index.html">Mikhail Ekadomov</a>
+                        <button onclick="myFunction()" class="nav-btn" type="button">&#x2228;</button>
+                    </div>
+                      <div class="nav-content" id="myDropdown">
+                            <div class="collection"> <a class="style-ref" href="weddingday.html">Wedding day</a></div>
+                            <div class="collection"> <a class="style-ref" href="unsorted.html">Unsorted</a></div>
+                            <div class="collection"><a class="style-ref" href="apsny.html">Apsny</a></div>
+                            <div class="collection"><a class="style-ref" href="">Portraits of Employees <br> still <span style="font-style:italic;"> (work in progress)</span></a></div>
+                            <div class="collection"><a class="style-ref" href="Objects.html">Objects</span></a></div>
+                            <div class="blog"><a class="style-ref" href="">blog</a></div>
+                            <div class="CV"><a class="style-ref" href="cv.html">CV</a></div>
+                            <div class="contacts"><a class="style-ref" href="contact.html">contacts</a></div>
+                      </div>
+                </div>
+            </div>
+            <div class="menu-middle">
+              <div class="inner">
+                <div class="image__box">
+                    <img class="image" src="./images/Portarits/portrait.jpg" alt="">
+                    <div class="image__title">Text text text text text text text Text text Text text text text text text text Text text Text text text text text text text Text text Text text text text text text text Text text Text text text text text text text Text text</div>
+                </div>
+                <p class="menu-right">
+
+                </p>
+              </div>
+            </div>
+          </div>
+
+            </div>
+        </div>
+    </div>
+        <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.nav-btn')) {
+
+            let dropdowns = document.getElementsByClassName("nav-content");
+            let i;
+            for (i = 0; i < dropdowns.length; i++) {
+              let openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+<!-- <script>
+    const burger = () => {
+        let menuElem = document.getElementsByClassName('nav-content');
+        let burgerElem = document.getElementsByClassName('nav-btn');
+
+        document.getElementsByClassName('nav-btn').addEventListener('click', () => {
+            if (document.getElementsByClassName('nav-content').style.display == "none") {
+                menuElem.style.display = 'block';
+            } else {
+                menuElem.style.display = 'none';
+            }
+        });
+    };
+    burger();
+</script> -->
+</body>
+</html>

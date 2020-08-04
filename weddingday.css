@@ -1,0 +1,245 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-page {
+    display: flex;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.menu-left {
+    flex-basis: 25%;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: sticky;
+    left: 0;
+    background-color: white;
+    padding-right: 30px;
+}
+
+.menu {
+  width: 200px;
+}
+
+.name {
+    font-size: 16px;
+    padding-bottom: 30px;
+    line-height: 22px;
+}
+
+.collection {
+    font-size: 16px;
+    padding-bottom: 5px;
+    line-height: 22px;
+}
+
+.blog {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.style-ref__active {
+    color: red;
+    text-decoration: none;
+}
+
+.style-ref {
+    text-decoration: none;
+    color: black;
+}
+
+.collection > .style-ref:hover {
+    color: red;
+}
+
+.blog > .style-ref:hover {
+    color: red;
+}
+
+.CV > .style-ref:hover {
+    color: red;
+}
+
+.contacts > .style-ref:hover {
+    color: red;
+}
+
+.gallery__horizontal {
+    flex-basis: 80%;
+    display: inline-flex;
+    padding-top: 60px;
+}
+
+.photos {
+    margin: 0;
+    width: 100%;
+}
+.photo {
+  display: block;
+  align-items: center;
+  padding: 30px 130px 10px 0px;
+}
+
+.one, .two, .three, .six, .eight, .nine {
+  height: 700px;
+}
+
+.four, .five, .seven, .ten, .eleven, .twelve, .thirteen, .fourteen, .fifteen, .sixteen, .eighteen, .nineteen {
+  height: 400px;
+  margin-top: 25%;
+}
+
+.seventeen {
+  height: 540px;
+  margin-top: 25%;
+}
+
+.title {
+    font-size: 10px;
+    font: normal 10px 'Arial', Helvetica, Arial, sans-serif;
+    color: #000000;
+    font-style: italic;
+}
+
+.wed__description {
+  display: block;
+    width: 510px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    line-height: 140%;
+    padding-bottom: 30px;
+    white-space: normal;
+}
+
+.navmenu {
+    visibility: hidden;
+}
+
+.wed__desc {
+    display: none;
+}
+
+@media (max-width: 420px) {
+    .menu, .wed__description {
+        display: none;
+    }
+
+   .main-page {
+       display: block;
+       width: 100%;
+       white-space: unset;
+   }
+
+   .menu-left {
+       display: block;
+       padding-left: 10px;
+       padding-bottom: 0px;
+       padding-right: 10px;
+    }
+
+    .menu-left::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #000;
+        width: 100%;
+    }
+
+    .nav-btn {
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    .navmenu .name {
+        visibility: visible;
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+
+    .nav-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        width: 100%;
+        overflow: auto;
+        right: 0;
+        z-index: 1;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .blog {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .nav-content .style-ref:hover {
+        color: red;
+    }
+
+    .show {
+        display: block;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes show {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+    .menu-middle {
+    flex-basis: 80%;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+
+   .image {
+       position: relative;
+   }
+
+   .navmenu {
+       visibility: visible;
+   }
+
+   .gallery__horizontal {
+       display: block;
+       padding-top: 0px;
+   }
+
+   .photo {
+       display: block;
+       width: 100%;
+       height: auto;
+       padding: 20px 30px;
+   }
+
+   .title {
+       display: block;
+       text-align: center;
+   }
+
+   .wed__desc {
+       display: block;
+       width: 100%;
+       padding: 20px 30px;
+       font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: normal;
+        line-height: 140%;
+   }

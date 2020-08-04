@@ -1,0 +1,390 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-page {
+    display: flex;
+}
+
+.menu-left {
+    flex-basis: 1;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-right: 30px;
+}
+
+.menu {
+  width: 200px;
+}
+
+.name {
+    font-size: 16px;
+    padding-bottom: 30px;
+    line-height: 22px;
+}
+
+.collection {
+    font-size: 16px;
+    padding-bottom: 5px;
+    line-height: 22px;
+}
+
+.blog {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.style-ref {
+    text-decoration: none;
+    color: black;
+}
+
+.style-ref__active {
+    text-decoration: none;
+    color: red;
+}
+
+.collection > .style-ref:hover {
+    color: red;
+}
+
+.blog > .style-ref:hover {
+    color: red;
+}
+
+.CV > .style-ref:hover {
+    color: red;
+}
+
+.contacts > .style-ref:hover {
+    color: red;
+}
+
+
+.back {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-unsorted {
+    padding-top: 82px;
+    flex-basis: 2;
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: start;
+}
+
+.image {
+    padding: 0 90px 110px 0;
+    align-self: center;
+    align-items: center;
+    display: flex;
+}
+
+.preview {
+    flex-basis: 25%;
+}
+
+.preview:hover {
+    opacity:0.8;
+    background-color:#000;
+}
+
+.navmenu {
+    visibility: hidden;
+}
+
+.menu-gallery{
+    display:none;
+    padding-top: 38px;
+}
+
+.buttons {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+}
+
+.prev, .next {
+    border: none;
+    text-decoration: none;
+    background-color: white;
+    outline: none;
+    text-transform: lowercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.photo__wrap {
+    display: none;
+    width: 100%;
+}
+
+.image__wrap {
+    width: 60%;
+    height: auto;
+}
+
+.gallery__desc {
+    width: 60%;
+    padding-top: 30px;
+    font-size: 10px;
+    font: normal 10px 'Arial', Helvetica, Arial, sans-serif;
+    color: #000000;
+    font-style: italic;
+    line-height: 140%;
+}
+
+.gallery__text {
+    font-style: italic;
+    width: 60%;
+    font-weight: normal;
+    font-size: 10px;
+    padding-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-bottom: 10px;
+    line-height: 140%;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  .navmenu {
+    visibility: hidden;
+}
+
+@media (max-width: 420px) {
+    .menu {
+        display: none;
+    }
+
+   .main-page {
+       display: block;
+       width: 100%;
+   }
+
+   .menu-left {
+       display: block;
+       padding-left: 10px;
+       padding-bottom: 0px;
+       padding-right: 10px;
+    }
+
+    .menu-left::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #000;
+        width: 100%;
+    }
+
+    .nav-btn {
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    .navmenu .name {
+        visibility: visible;
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+
+    .nav-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        width: 100%;
+        overflow: auto;
+        right: 0;
+        z-index: 1;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .blog {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .nav-content .style-ref:hover {
+        color: red;
+    }
+
+    .show {
+        display: block;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+
+    @keyframes show {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+    .menu-middle {
+    flex-basis: 80%;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+
+   .image {
+       position: relative;
+   }
+
+   .navmenu {
+       visibility: visible;
+   }
+.menu-gallery {
+    display: block;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.gallery__desc, .gallery__text {
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.image__wrap {
+    width: 90%;
+}
+
+
+
+
+@media (max-width: 1024px) {
+    .image {
+        padding: 10px 15px;
+    }
+}
+@media (max-width: 800px) {
+    .image {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .menu {
+        display: none;
+    }
+
+   .main-page {
+       display: block;
+       width: 100%;
+   }
+
+   .menu-left {
+       display: block;
+       padding-left: 10px;
+       padding-bottom: 0px;
+       padding-right: 10px;
+    }
+
+    .menu-left::after {
+        content: '';
+        display: block;
+        border-bottom: 1px solid #000;
+        width: 100%;
+    }
+
+    .nav-btn {
+        border: none;
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+
+    .navmenu .name {
+        visibility: visible;
+        display: inline-flex;
+        width: 100%;
+        justify-content: space-between;
+        padding-bottom: 10px;
+    }
+
+    .nav-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        width: 100%;
+        overflow: auto;
+        right: 0;
+        z-index: 1;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .blog {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .nav-content .style-ref:hover {
+        color: red;
+    }
+
+    .show {
+        display: block;
+        animation-name: fade;
+        animation-duration: 2s;
+    }
+
+    .menu-middle {
+    flex-basis: 80%;
+    padding-top: 20px;
+    padding-right: 10px;
+    padding-left: 10px;
+   }
+
+   .image {
+       position: relative;
+       display: block;
+       padding: 20px 20px;
+   }
+
+   .navmenu {
+       visibility: visible;
+   }
+
+   .menu-unsorted {
+    margin-top: 5%;
+    flex-basis: 80%;
+    display: block;
+    text-align: center;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: flex-start;
+}
+
+.preview {
+    width: 90%;
+}

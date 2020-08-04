@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./cv.css">
+    <title>CV</title>
+</head>
+<body>
+    <div class="main-page">
+        <div class="menu-left">
+            <div class="menu">
+            <div class="name"> <a class="style-ref" href="index.html">Mikhail Ekadomov</a></div>
+            <div class="collection"> <a class="style-ref" href="weddingday.html">Wedding day</a></div>
+            <div class="collection"> <a class="style-ref" href="unsorted.html">Unsorted</a></div>
+            <div class="collection"><a class="style-ref" href="apsny.html">Apsny</a></div>
+            <div class="collection"><a class="style-ref" href="portrait.html">Portraits of Employees</a></div>
+            <div class="collection"><a class="style-ref" href="#">Still <span style="font-style:italic;"> (work in progress)</span></a></div>            
+            <div class="blog"><a class="style-ref" href="">blog</a></div>
+            <div class="CV"><a class="style-ref__active" href="cv.html">CV</a></div>
+            <div class="contacts"><a class="style-ref" href="contact.html">contacts</a></div>
+            </div>
+            <div class="navmenu">
+                <div class="name">
+                    <a class="style-ref" href="index.html">Mikhail Ekadomov</a>
+                    <button onclick="myFunction()" class="nav-btn" type="button">&#x2228;</button>
+                </div>
+                  <div class="nav-content" id="myDropdown">
+                        <div class="collection"> <a class="style-ref" href="weddingday.html">Wedding day</a></div>
+                        <div class="collection"> <a class="style-ref" href="unsorted.html">Unsorted</a></div>
+                        <div class="collection"><a class="style-ref" href="apsny.html">Apsny</a></div>
+                        <div class="collection"><a class="style-ref" href="">Portraits of Employees <br> still <span style="font-style:italic;"> (work in progress)</span></a></div>
+                        <div class="blog"><a class="style-ref" href="">blog</a></div>
+                        <div class="CV"><a class="style-ref" href="cv.html">CV</a></div>
+                        <div class="contacts"><a class="style-ref" href="contact.html">contacts</a></div>
+                  </div>
+            </div>
+        </div>
+        <div class="bio">
+            <div class="title">Bio:</div>
+            <div class="text">
+                Born in 1983 in Moscow, Russia <br>
+                Lives and works in Moscow <br>
+            </div>
+            <div class="title">Group exhibitions: </div>
+            <div class="text">
+                2016 - Festival of Street Photography, Gallery "FotoDoc", Moscow, Russia <br>
+                2016 - Innervisions, travelling exhibition (Russia, Latvia, Belarus) <br>
+                2015 - "7 phrases", Phoenix, Moscow, Russia <br>
+                2014 - Festival of Street Photography, Gallery "FotoDoc", Moscow, Russia <br>
+            </div>
+            <div class="title">Awards:</div>
+            <div class="text">
+                2016 - Festival of Street Photography, Russia - winner, 1st prize <br>
+                2014 - Festival of Street Photography, Russia - shortlist of the Festival, special shortlist of Oh!Sheet magazine <br>
+            </div>
+            <div class="title">Published features:</div>
+            <div class="text">
+                2018 - Bauhaus-Imaginista <br>
+                2018 - AD Russia <br>
+                2017 - Dodho magazine <br>
+                2017 - Coeval magazine <br>
+                2014 - Oh!Sheet magazine <br>
+            </div>
+        </div>
+    </div>
+    <script>
+        /* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.nav-btn')) {
+
+            let dropdowns = document.getElementsByClassName("nav-content");
+            let i;
+            for (i = 0; i < dropdowns.length; i++) {
+              let openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+        </script>
+</body>
+</html>
